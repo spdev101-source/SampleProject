@@ -7,6 +7,7 @@ import com.example.entity.Category;
 public interface CategoryRepository extends JpaRepository<Category,Long> {
 boolean existsByCategoryname(String categoryname);
 boolean existsByCategorynameAndIdNot(String name,Long id);
+boolean existsByCode(String code);
 /*
  CREATE OR REPLACE FUNCTION get_stock_report(
     p_from_date DATE,

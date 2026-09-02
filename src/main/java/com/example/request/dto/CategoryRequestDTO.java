@@ -2,8 +2,16 @@ package com.example.request.dto;
 
 
 public class CategoryRequestDTO {
-	private String categoryname;
-	private String description;
+	     private String code;
+	    private String categoryname;
+	    private String description;
+
+	public String getCode() {
+			return code;
+		}
+		public void setCode(String code) {
+			this.code = code;
+		}
 	public String getCategoryname() {
 		return categoryname;
 	}

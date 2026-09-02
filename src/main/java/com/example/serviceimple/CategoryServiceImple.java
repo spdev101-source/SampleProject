@@ -26,9 +26,14 @@ public class CategoryServiceImple implements CategoryService {
 	@Override
 	public CategoryResponseDTO createCategory(CategoryRequestDTO requestDTO) {
 		if (categoryRepository.existsByCategoryname(requestDTO.getCategoryname())) {
-			throw new RuntimeException("Category Already exists with Name:");
+			throw new RuntimeException("Category Already exists with Name:"+requestDTO.getCategoryname());
+		}
+		if(categoryRepository.existsByCode(requestDTO.getCode()))
+		{
+			throw new RuntimeException("Category Already exists with Code:"+requestDTO.getCode());
 		}
 		Category category = new Category();
+		category.setCode(requestDTO.getCode());
 		category.setCategoryname(requestDTO.getCategoryname());
 		category.setDescription(requestDTO.getDescription());
 		category.setCreatedat(LocalDateTime.now());
