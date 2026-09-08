@@ -10,4 +10,5 @@ public interface CategoryService {
 	CategoryResponseDTO createCategory(CategoryRequestDTO requestDTO);
 	Optional<CategoryResponseDTO> getCategoryById(Long id);
 	CategoryResponseDTO updateCategory(Long id,CategoryRequestDTO requestDTO);
+	boolean deleteCategory(Long id);
 }

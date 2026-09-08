@@ -4,19 +4,12 @@ import java.time.LocalDateTime;
 
 public class CategoryResponseDTO {
 	private Long id;
-	private String code;
 	private String categoryname;
-	private String description;
 	private Boolean isactive;
 	private LocalDateTime createdat;
 	private LocalDateTime updatedat;
 
-	public String getCode() {
-		return code;
-	}
-	public void setCode(String code) {
-		this.code = code;
-	}
+	
 	public Long getId() {
 		return id;
 	}
@@ -29,12 +22,7 @@ public class CategoryResponseDTO {
 	public void setCategoryname(String categoryname) {
 		this.categoryname = categoryname;
 	}
-	public String getDescription() {
-		return description;
-	}
-	public void setDescription(String description) {
-		this.description = description;
-	}
+	
 	public Boolean getIsactive() {
 		return isactive;
 	}
