@@ -65,6 +65,6 @@ public class CategoryServiceImple implements CategoryService {
 		return false;
 	}
 /*
- https://claude.ai/share/25651143-be2d-45ca-9c56-826a1e4fe648
+ https://claude.ai/share/f1b26e0f-7524-4828-b9e9-be596f4a51bc
  */
 }
