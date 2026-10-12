@@ -1,0 +1,974 @@
+package com.pack2;
+
+public class Patterns {
+	void pattern1()
+	{
+		/*
+		 1 2 3 4 5
+		 1 2 3 4 5
+		 1 2 3 4 5
+		 1 2 3 4 5
+		 */
+		//-- First Way-----
+//		for(int i=1;i<=4;i++)
+//		{
+//			for(int j=1;j<=5;j++)
+//			{
+//				System.out.print(j+" ");
+//			}
+//			System.out.println();
+//		}
+		//-----Second Way-----
+//		int i=1;
+//		while(i<=4)
+//		{
+//			int j=1;
+//			while(j<=5)
+//			{
+//				System.out.print(j);
+//				j++;
+//			}
+//			System.out.println();
+//			i++;
+//		}
+		//----Third Way----
+//		int i=1;
+//		do
+//		{
+//			int j=1;
+//			do
+//			{
+//				System.out.print(j);
+//				j++;
+//			}while(j<=5);
+//			System.out.println();
+//			i++;
+//		}while(i<=4);
+		//----Fourth Way-----------
+		int arr[]= {1,2,3,4,5};
+		for(int i=1;i<=4;i++)
+		{
+			for(int j:arr)
+			{
+				System.out.print(j);
+			}
+			System.out.println();
+		}
+	}
+	void pattern2()
+	{
+		/*
+		 1 1 1 1 1
+		 2 2 2 2 2
+		 3 3 3 3 3
+		 4 4 4 4 4
+		 5 5 5 5 5
+		 */
+		for(int i=1;i<=5;i++)
+		{
+			for(int j=1;j<=5;j++)
+			{
+				System.out.print(i);
+			}
+			System.out.println();
+		}
+		
+	}
+	void pattern3()
+	{
+		/*
+		  5 4 3 2 1
+		  5 4 3 2 1
+		  5 4 3 2 1
+		  5 4 3 2 1
+		  5 4 3 2 1
+		 */
+//		for(int i=1;i<=5;i++)
+//		{
+//			for(int j=5;j>=1;j--)
+//			{
+//				System.out.print(j+" ");
+//			}
+//			System.out.println();
+//		}
+		int arr[]= {1,2,3,4,5};
+		for(int i:arr)
+		{
+			for(int j=5;j>=1;j--)
+			{
+				System.out.print(j);
+			}
+			System.out.println();
+		}
+	}
+	void pattern4()
+	{
+		/*
+		 5 5 5 5 5
+		 4 4 4 4 4
+		 3 3 3 3 3
+		 2 2 2 2 2
+		 1 1 1 1 1
+		 */
+		for(int i=5;i>=1;i--)
+		{
+			for(int j=1;j<=5;j++)
+			{
+				System.out.print(i);
+			}
+			System.out.println();
+		}
+	}
+	void pattern5()
+	{
+		/*
+		 
+		 * 
+		 * *
+		 * * *
+		 * * * *
+		 * * * * *
+		 
+		 */
+//		for(int i=1;i<=5;i++)
+//		{
+//			for(int j=1;j<=i;j++)
+//			{
+//				System.out.print("*"+" ");
+//				
+//			}
+//			System.out.println();
+//		}
+		int i=1;
+		while(i<=5)
+		{
+			int j=1;
+			while(j<=i)
+			{
+				System.out.print("*"+" ");
+				j++;
+			}
+			System.out.println();
+			i++;
+		}
+	}
+	void pattern6()
+	{
+		/*
+		 
+		 * * * * *
+		 * * * * *
+		 * * * * *
+         * * * * *
+         * * * * *
+         
+		 */
+		for(int i=1;i<=5;i++)
+		{
+			for(int j=1;j<=5;j++)
+			{
+				System.out.print("*"+" ");
+			}
+			System.out.println();
+		}
+	}
+	void pattern7()
+	{
+		/*
+		 1   2  3  4  5
+		 6   7  8  9 10
+		 11 12 13 14 15
+		 16 17 18 19 20
+		 21 22 23 24 25
+		 */
+//		int n=1;
+//		for(int i=1;i<=5;i++)
+//		{
+//			for(int j=1;j<=5;j++)
+//			{
+//				System.out.print(n+" ");
+//				n++;
+//			}
+//			System.out.println();
+//		}
+//		int n=1;
+//		int i=1;
+//		while(i<=5)
+//		{
+//			int j=1;
+//			while(j<=5)
+//			{
+//				System.out.print(n+" ");
+//				n++;
+//				j++;
+//			}
+//			System.out.println();
+//			i++;
+//		}
+//		int n=1;
+//		int arr[]= {1,2,3,4,5};
+//		for(int i:arr)
+//		{
+//			for(int j:arr)
+//			{
+//			System.out.print(n+" ");
+//			n++;
+//			}
+//			System.out.println();
+//		}
+		for(int i=0;i<5;i++)
+		{
+			for(int j=1;j<=5;j++)
+			{
+				System.out.print((i*5+j)+" ");
+			}
+			System.out.println();
+		}
+		
+	}
+	void pattern8()
+	{
+		/*
+		A B C D E 
+		F G H I J 
+		K L M N O 
+		P Q R S T 
+		U V W X Y 
+		*/
+//		char ch='A';
+//		for(int i=1;i<=5;i++)
+//		{
+//			for(int j=1;j<=5;j++)
+//			{
+//				System.out.print(ch+" ");
+//				ch++;
+//			}
+//			System.out.println();
+//		}
+		for(int i=0;i<5;i++)
+		{
+			for(int j=0;j<5;j++)
+			{
+				System.out.print((char)('A'+(i*5)+j)+" ");
+			}
+			System.out.println();
+		}
+	}
+	void pattern9()
+	{
+		/*
+		 A B C D E 
+         A B C D E 
+         A B C D E 
+         A B C D E 
+         A B C D E 
+		 */
+		for(int i=1;i<=5;i++)
+		{
+			for(char j='A';j<='E';j++)
+			{
+				System.out.print(j+" ");
+			}
+			System.out.println();
+		}
+	}
+	void pattern10()
+	{
+		/*
+		 E D C B A 
+         E D C B A 
+         E D C B A 
+         E D C B A 
+         E D C B A 
+
+		 */
+		for(int i=1;i<=5;i++)
+		{
+			for(char j='E';j>='A';j--)
+			{
+				System.out.print(j+" ");
+			}
+			System.out.println();
+		}
+	}
+	void pattern11()
+	{
+		/*
+		A A A A A 
+		B B B B B 
+		C C C C C 
+		D D D D D 
+		E E E E E 
+               */
+//		for(char i='A';i<='E';i++)
+//		{
+//			for(int j=1;j<=5;j++)
+//			{
+//				System.out.print(i+" ");
+//			}
+//			System.out.println();
+//		}
+//		char i='A';
+//		while(i<='E')
+//		{
+//			int j=1;
+//			while(j<=5)
+//			{
+//				System.out.print(i+" ");
+//				j++;
+//			}
+//			System.out.println();
+//			i++;
+//		}
+		int arr[]= {1,2,3,4,5};
+		for(char i='A';i<='E';i++)
+		{
+			for(int j:arr)
+			{
+				System.out.print(i+" ");
+				
+			}
+			System.out.println();
+		}
+	}
+	void pattern12()
+	{
+		/*
+		E E E E E 
+		D D D D D 
+		C C C C C 
+		B B B B B 
+		A A A A A 
+		*/
+
+		for(char i='E';i>='A';i--)
+		{
+			for(int j=1;j<=5;j++)
+			{
+				System.out.print(i+" ");
+			}
+			System.out.println();
+		}
+	}
+	void pattern13()
+	{
+		/*
+		1 
+		1 2 
+		1 2 3 
+		1 2 3 4 
+		1 2 3 4 5 
+		*/
+
+		for(int i=1;i<=5;i++)
+		{
+			for(int j=1;j<=i;j++)
+			{
+				System.out.print(j+" ");
+			}
+			System.out.println();
+		}
+	}
+	void pattern14()
+	{
+		/*
+		5 
+		5 4 
+		5 4 3 
+		5 4 3 2 
+		5 4 3 2 1 
+		*/
+
+		for(int i=5;i>=1;i--)
+		{
+			for(int j=5;j>=i;j--)
+			{
+				System.out.print(j+" ");
+			}
+			System.out.println();
+		}
+	}
+	void pattern15()
+	{
+		/*
+		1 
+		2 2 
+		3 3 3 
+		4 4 4 4 
+		5 5 5 5 5 
+		*/
+
+		for(int i=1;i<=5;i++)
+		{
+			for(int j=1;j<=i;j++)
+			{
+				System.out.print(i+" ");
+			}
+			System.out.println();
+		}
+	}
+	void pattern16()
+	{
+		/*
+		5 
+		4 4 
+		3 3 3 
+		2 2 2 2 
+		1 1 1 1 1 
+		*/
+		for(int i=5;i>=1;i--)
+		{
+			for(int j=5;j>=i;j--)
+			{
+				System.out.print(i+" ");
+			}
+			System.out.println();
+		}
+	}
+	void pattern17()
+	{
+		/*
+		A 
+		A B 
+		A B C 
+		A B C D 
+		A B C D E 
+		*/
+
+		for(char i='A';i<='E';i++)
+		{
+			for(char j='A';j<=i;j++)
+			{
+				System.out.print(j+" ");
+			}
+			System.out.println();
+		}
+	}
+	void pattern18()
+	{
+		/*
+		E 
+		E D 
+		E D C 
+		E D C B 
+		E D C B A 
+                */
+	for(char i='E';i>='A';i--)
+	{
+		for(char j='E';j>=i;j--)
+		{
+			System.out.print(j+" ");
+		}
+		System.out.println();
+	}
+	}
+	void pattern19()
+	{
+		/*
+		1 2 3 4 5 
+		1 2 3 4 
+		1 2 3 
+		1 2 
+		1 
+		*/
+		for(int i=5;i>=1;i--)
+		{
+			for(int j=1;j<=i;j++)
+			{
+				System.out.print(j+" ");
+			}
+			System.out.println();
+		}
+	}
+	void pattern20()
+	{
+		/*
+		5 4 3 2 1 
+		5 4 3 2 
+		5 4 3 
+		5 4 
+		5 
+		*/
+		for(int i=1;i<=5;i++)
+		{
+			for(int j=5;j>=i;j--)
+			{
+				System.out.print(j+" ");
+			}
+			System.out.println();
+		}
+	}
+	void pattern21()
+	{
+		/*
+		A B C D E 
+		A B C D 
+		A B C 
+		A B 
+		A 
+*/
+		for(char i='E';i>='A';i--)
+		{
+			for(char j='A';j<=i;j++)
+			{
+				System.out.print(j+" ");
+			}
+			System.out.println();
+		}
+	}
+	void pattern22()
+	{
+		/*
+		E E E E E 
+		D D D D 
+		C C C 
+		B B 
+		A 
+*/
+		for(char i='E';i>='A';i--)
+		{
+			for(char j='A';j<=i;j++)
+			{
+				System.out.print(i+" ");
+			}
+			System.out.println();
+		}
+	}
+	void pattern23()
+	{
+		/*
+		1 
+		2 1 
+		3 2 1 
+		4 3 2 1 
+		5 4 3 2 1 
+*/
+		for(int i=1;i<=5;i++)
+		{
+			for(int j=i;j>=1;j--)
+			{
+				System.out.print(j+" ");
+			}
+			System.out.println();
+		}
+	}
+	void pattern24()
+	{
+		/*
+		A B C D E 
+		B C D E 
+		C D E 
+		D E 
+		E 
+*/
+		for(char i='A';i<='E';i++)
+		{
+			for(char j=i;j<='E';j++)
+			{
+				System.out.print(j+" ");
+			}
+			System.out.println();
+		}
+	}
+	void pattern25()
+	{
+		/*
+		5 4 3 2 1 
+		4 3 2 1 
+		3 2 1 
+		2 1 
+		1 
+*/
+		for(int i=5;i>=1;i--)
+		{
+			for(int j=i;j>=1;j--)
+			{
+				System.out.print(j+" ");
+			}
+			System.out.println();
+		}
+	}
+	void pattern26()
+	{
+		/*
+		1 2 3 4 5 
+		2 3 4 5 
+		3 4 5 
+		4 5 
+		5 
+*/
+		for(int i=1;i<=5;i++)
+		{
+			for(int j=i;j<=5;j++)
+			{
+				System.out.print(j+" ");
+			}
+			System.out.println();
+		}
+	}
+	void pattern27()
+	{
+		/*
+		 A B C D E
+		 J I H G F
+		 K L M N O
+		 T S R Q P
+		 U V W X Y
+		 */
+		char ch = 'A';
+		for(int i=1;i<=5;i++)
+		{
+			if(i%2!=0)
+			{
+				for(int j=1;j<=5;j++)
+				{
+					System.out.print(ch+" ");
+					ch++;
+				}
+			}
+			else
+			{
+				ch=(char)(ch+4);
+
+				for(int j=1;j<=5;j++)
+				{
+					System.out.print(ch+" ");
+					ch--;
+				}
+				ch=(char)(ch+6);
+			}
+			System.out.println();
+		}
+		
+		
+	}
+	void pattern28()
+	{
+		/*
+		A B C D E 
+		a b c d e 
+		A B C D E 
+		a b c d e 
+		A B C D E 
+*/
+		for(int i=1;i<=5;i++)
+		{
+			if(i%2!=0)
+			{
+				for(char j='A';j<='E';j++)
+				{
+					System.out.print(j+" ");
+				}
+			}
+			else
+			{
+				for(char j='a';j<='e';j++)
+				{
+					System.out.print(j+" ");
+				}
+			}
+			System.out.println();
+		}
+	}
+	void pattern29()
+	{
+		/*
+		 A B C D E
+		 f g h i j
+		 K L M N O
+		 p q r s t
+		 U V W X Y
+		 */
+		char ch='A';
+		for(int i=1;i<=5;i++)
+		{
+			for(int j=1;j<=5;j++)
+			{
+				if(i%2!=0)
+				{
+					System.out.print(ch+" ");
+				}
+				else
+				{
+					System.out.print((char)(ch+32)+" ");
+				}
+				ch++;
+			}
+			System.out.println();
+		}
+	}
+	void pattern30()
+	{
+		/*
+		1 0 1 0 1 
+		0 1 0 1 0 
+		1 0 1 0 1 
+		0 1 0 1 0 
+		1 0 1 0 1 
+		*/
+
+//		int n=1;
+//		for(int i=1;i<=5;i++)
+//		{
+//			for(int j=1;j<=5;j++)
+//			{
+//				if(n==1)
+//				{
+//					System.out.print(n--+" ");
+//				}
+//				else
+//				{
+//					System.out.print(n+++" ");
+//				}
+//			}
+//			System.out.println();
+//
+//		}
+		for(int i=1;i<=5;i++)
+		{
+			for(int j=1;j<=5;j++)
+			{
+				System.out.print((i+j+1)%2+" ");
+			}
+			System.out.println();
+		}
+	}
+	void pattern31()
+	{
+		/*
+		 
+	     * 
+	    * * 
+	   * * * 
+	  * * * * 
+	 * * * * * 
+	 
+		 */
+
+		int n=5;
+		for(int i=1;i<=n;i++)
+		{
+			for(int j=1;j<=n-i;j++)
+			{
+				System.out.print(" ");
+			}
+			for(int k=1;k<=i;k++)
+			{
+				System.out.print("*"+" ");
+			}
+			System.out.println();
+		}
+	}
+	void pattern32()
+	{
+		/*
+	     1 
+	    1 2 
+	   1 2 3 
+	  1 2 3 4 
+	 1 2 3 4 5 
+	 */
+		int n=5;
+		for(int i=1;i<=5;i++)
+		{
+			for(int j=1;j<=n-i;j++)
+			{
+				System.out.print(" ");
+			}
+			for(int k=1;k<=i;k++)
+			{
+				System.out.print(k+" ");
+			}
+			System.out.println();
+		}
+	}
+	void pattern33()
+	{
+		/*
+		  1 2 3 4 5 
+           1 2 3 4 
+            1 2 3 
+             1 2 
+              1 
+
+		 */
+		for(int i=5;i>=1;i--)
+		{
+			for(int j=5;j>=i;j--)
+			{
+				System.out.print(" ");
+			}
+			for(int k=1;k<=i;k++)
+			{
+				System.out.print(k+" ");
+			}
+			System.out.println();
+		}
+	}
+	void pattern34()
+	{
+		/*
+		         1
+		       1 2
+		     1 2 3
+		   1 2 3 4
+		 1 2 3 4 5
+		 */
+		int n=5;
+		for(int i=1;i<=5;i++)
+		{
+			for(int j=n-i;j>=1;j--)
+			{
+				System.out.print("  ");
+			}
+			for(int k=1;k<=i;k++)
+			{
+				System.out.print(k +" ");
+			}
+			System.out.println();
+		}
+	}
+	void pattern35()
+	{
+		/*
+		          5
+		        4 5    
+		      3 4 5
+		    2 3 4 5
+		  1 2 3 4 5
+		 */
+		int n=5;
+		for(int i=1;i<=5;i++)
+		{
+			for(int j=1;j<=n-i;j++)
+			{
+				System.out.print("  ");
+			}
+			for(int k=n-i+1;k<=n;k++)
+			{
+				System.out.print(k+" ");
+			}
+			System.out.println();
+		}
+	}
+	void pattern36()
+	{
+		/*
+		         * 
+               * * 
+             * * * 
+           * * * * 
+         * * * * * 
+		 
+		 */
+		int n=5;
+		for(int i=1;i<=n;i++)
+		{
+			for(int j=n-i;j>=1;j--)
+			{
+				System.out.print("  ");
+			}
+			for(int k=n-i+1;k<=5;k++)
+			{
+				System.out.print("* ");
+			}
+			System.out.println();
+		}
+	}
+	void pattern37()
+	{
+		for(int i=1;i<=5;i++)
+		{
+			for(int j=1;j<=i-1;j++)
+			{
+				System.out.print("  ");
+			}
+			for(int k=i;k<=5;k++)
+			{
+				System.out.print(k+" ");
+			}
+			System.out.println();
+		}
+	}
+	void pattern60()
+	{
+		/*
+		
+		 * * * * *
+		 * * * *
+		 * * *
+		 * *
+		 * 
+		 
+		 */
+		for(int i=5;i>=1;i--)
+		{    
+			for(int j=1;j<=i;j++)
+			{
+				System.out.print("*"+" ");
+			}
+			System.out.println();
+		}
+	}
+	void pattern61()
+	{
+		/*
+		  1
+		  2 3
+		  4 5 6
+		  7 8 9 10
+		 */
+		int n=1;
+		for(int i=1;i<=4;i++)
+		{
+			for(int j=1;j<=i;j++)
+			{
+				System.out.print(n+" ");
+				n++;
+			}
+			System.out.println();
+		}
+	}
+public static void main(String[] args) {
+	Patterns p=new Patterns();
+	//p.pattern1();
+	//p.pattern2();
+	//p.pattern3();
+	//p.pattern4();
+	//p.pattern5();
+	//p.pattern6();
+	//p.pattern7();
+	//p.pattern8();
+	//p.pattern9();
+	//p.pattern10();
+    //p.pattern11();
+	//p.pattern12();
+	//p.pattern13();
+	//p.pattern14();
+	//p.pattern15();
+	//p.pattern16();
+	//p.pattern17();
+	//p.pattern18();
+	//p.pattern19();
+	//p.pattern20();
+	//p.pattern21();
+	//p.pattern22();
+	//p.pattern23();
+	//p.pattern24();
+	//p.pattern25();
+	//p.pattern26();
+	//p.pattern27();
+	//p.pattern28();
+	//p.pattern29();
+	//p.pattern30();
+	//p.pattern31();
+	//p.pattern32();
+	//p.pattern33();
+	//p.pattern34();
+	//p.pattern35();
+	//p.pattern36();
+	//p.pattern37();
+	//p.pattern60();
+	p.pattern61();
+	}
+}
