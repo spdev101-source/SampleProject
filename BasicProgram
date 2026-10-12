@@ -1,0 +1,1407 @@
+package com.program;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class BasicProgram {
+	Scanner sc=new Scanner(System.in);
+	void program1()
+	{
+		System.out.println("Enter Number 1:");
+		int n1=sc.nextInt();
+		System.out.println("Enter Number 2: ");
+		int n2=sc.nextInt();
+		//		System.out.println("1.Add: "+(n1+n2));
+		//		System.out.println("2.Sub: "+(n1-n2));
+		//		System.out.println("3.Multi: "+(n1*n2));
+		//		System.out.println("4.Div: "+(n1/n2));
+		//		System.out.println("5.Rem: "+(n1%n2));
+		System.out.println("1.Add 2.Sub 3.Multi 4.Div 5.Rem");
+		System.out.println("Enter choice:");
+		int ch=sc.nextInt();
+		switch(ch)
+		{
+		case 1:
+			System.out.println(n1+n2);
+			break;
+		case 2:
+			System.out.println(n1-n2);
+			break;
+		default:
+			System.out.println("Invalid");
+		}
+	}
+	void program2()
+	{
+		System.out.println("Enter Number 1:");
+		int n1=sc.nextInt();
+		System.out.println("Enter Number 2: ");
+		int n2=sc.nextInt();
+		System.out.println("Enter Number 3:");
+		int n3=sc.nextInt();
+		System.out.println("Enter Number 4: ");
+		int n4=sc.nextInt();
+		int total=(n1+n2+n3+n4);
+		double per=(n1+n2+n3+n4)*100/400;
+		System.out.println("Total is:"+total+" "+"Percentage is: "+per);
+	}
+	void multiplication()
+	{
+		System.out.println("Enter Number:");
+		int n=sc.nextInt();
+		for(int i=1;i<=10;i++)
+		{
+			System.out.println(n+"X"+i+"="+(n*i));
+		}
+	}
+	void program4()
+	{
+		for(int i=1;i<=10;i++)
+		{
+			for(int n=1;n<=10;n++)
+			{
+				System.out.print(n+"X"+i+"="+(n*i)+"\t");
+			}
+			System.out.println();
+		}
+	}
+	void program5()
+	{
+		System.out.println("Enter n1: ");
+		int n1=sc.nextInt();
+		System.out.println("Enter n2: ");
+		int n2=sc.nextInt();
+		//		if(n1>=n2)
+		//		{
+		//			System.out.println("n1 is max");
+		//		}
+		//		else
+		//		{
+		//			System.out.println("n2 is max");
+		//		}
+		String r=(n1>=n2)?"n1 max":"n2 max";
+		System.out.println(r);
+	}
+	void program6()
+	{
+		System.out.println("Enter n1: ");
+		int n1=sc.nextInt();
+		System.out.println("Enter n2: ");
+		int n2=sc.nextInt();
+		System.out.println("Enter n3: ");
+		int n3=sc.nextInt();
+		//		if(n1>=n2&&n1>=n3)
+		//		{
+		//			System.out.println("n1 is max");
+		//		}
+		//		else if(n2>=n1&&n2>=n3)
+		//		{
+		//			System.out.println("n2 is max");
+		//		}
+		//		else
+		//		{
+		//			System.out.println("n3 is max");
+		//		}
+		String r=(n1>=n2&&n1>=n3)?"N1 max":(n2>=n1&&n2>=n3)?"N2 max":"N3 max";
+		System.out.println(r);
+	}
+	void program7()
+	{
+		System.out.println("Enter number: ");
+		int n=sc.nextInt();
+		//		if(n%3==0)
+		//		{
+		//			System.out.println("Divisible by 3");
+		//		}
+		//		else
+		//		{
+		//			System.out.println("Not");
+		//		}
+		boolean isdivisible=(n%3==0);
+		if(isdivisible)
+		{
+			System.out.println("Divisible");
+		}
+		else
+		{
+			System.out.println("Not..");
+		}
+	}
+	void program8()
+	{
+		System.out.println("Enter number: ");
+		int n=sc.nextInt();
+		//		if(n%2==0)
+		//		{
+		//			System.out.println("Even");
+		//		}
+		//		else
+		//		{
+		//			System.out.println("Odd");
+		//		}
+		if((n&1)==0)
+		{
+			System.out.println("Even");
+		}
+		else
+		{
+			System.out.println("odd");
+		}
+	}
+	void program9()
+	{
+		System.out.println("Enter number: ");
+		int n=sc.nextInt();
+		if(n>0)
+		{
+			System.out.println("positive");
+		}
+		else if(n<0)
+		{
+			System.out.println("negative");
+		}
+		else
+		{
+			System.out.println("Zero");
+		}
+
+	}
+	void program10()
+	{
+		System.out.println("Enter year: ");
+		int y=sc.nextInt();
+		if(y%400==0)
+		{
+			System.out.println("Leap year");
+		}
+		else if(y%100==0)
+		{
+			System.out.println("Not leap year");
+		}
+		else if(y%4==0)
+		{
+			System.out.println("Leap year");
+		}
+		else
+		{
+			System.out.println("Not ");
+		}
+	}
+	void program21()
+	{
+		System.out.println("Enter digit: ");
+		char ch=sc.next().charAt(0);
+		//		if(ch>='0'&&ch<='9')
+		//		{
+		//			System.out.println("Digit");
+		//		}
+		//		else
+		//		{
+		//			System.out.println("Not");
+		//		}
+		if(Character.isDigit(ch))
+		{
+			System.out.println("Digit..");
+		}
+		else
+		{
+			System.out.println("Not");
+		}
+	}
+	void program22()
+	{
+		System.out.println("Enter Alphabet: ");	
+		char ch=sc.next().charAt(0);
+		if((ch>='A'&&ch<='Z')||(ch>='a'&&ch<='z'))
+		{
+			System.out.println("alphabet");
+		}
+		else
+		{
+			System.out.println("Not");
+		}
+	}
+	void program23()
+	{
+		System.out.println("Enter Character: ");
+		char ch=sc.next().charAt(0);
+		//		if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+		//		{
+		//			System.out.println("Vowel");
+		//		}
+		//		else
+		//		{
+		//			System.out.println("not");
+		//		}
+		switch(ch)
+		{
+		case 'a':case 'e':case 'i': case'o':case 'u':
+			System.out.println("Vowel");
+			break;
+		default:
+			System.out.println("consonant");
+		}
+	}
+	void program24()
+	{
+		System.out.println("Enter chracter:");
+		char ch=sc.next().charAt(0);
+		if(ch>='A'&&ch<='Z')
+		{
+			System.out.println("Uppercase");
+		}
+		else
+
+		{
+			System.out.println("lowercase");
+		}
+	}
+	void program26()
+	{
+		System.out.println("Enter Number: ");
+		int n=sc.nextInt();
+		if(n%5==0)
+		{
+			System.out.println("Hello");
+		}
+		else
+		{
+			System.out.println("Bye");
+		}
+	}
+	void program27()
+	{
+		System.out.println("Enter Number: ");
+		int n=sc.nextInt();
+		int lastdigit=n%10;
+		if(lastdigit%3==0)
+		{
+			System.out.println("Divisibleby3");
+		}
+		else
+		{
+			System.out.println("Not");
+		}
+	}
+	void program30()
+	{
+		System.out.println("Enter Number 1:");
+		int n1=sc.nextInt();
+		System.out.println("Enter Number 2: ");
+		int n2=sc.nextInt();
+		int temp;
+		temp=n1;
+		n1=n2;
+		n2=temp;    
+	}
+	void program31()
+	{
+		System.out.println("Enter Number 1:");
+		int n1=sc.nextInt();
+		System.out.println("Enter Number 2: ");
+		int n2=sc.nextInt();
+		System.out.println("Before swapping:"+n1+" "+n2);
+		n1=n1+n2;//n1=>1+2=>3=>n1=3
+		n2=n1-n2;//n2=3-2=>1=>n2=1
+		n1=n1-n2;//3-1=>2 ==>n1=2
+		System.out.println("After Swapping:"+n1+" "+n2);
+	}
+	void program32()
+	{
+		System.out.println("Enter Number: ");
+		int n=sc.nextInt();
+		int fact=1;
+		for(int i=1;i<=n;i++)
+		{
+			fact=fact*i;
+		}
+		System.out.println("Factorial is:"+fact);
+	}
+	void program33()
+	{
+		//		for(int i=1;i<=100;i++)
+		//		{
+		//			if(i%2==0)
+		//			{
+		//				System.out.println(i);
+		//			}
+		//		}
+		//		for(int i=2;i<=100;i=i+2)
+		//		{
+		//			System.out.println(i);
+		//		}
+		int i=1;
+		while(i<=100)
+		{
+			if(i%2==0)
+			{
+				System.out.println(i);
+			}
+			i++;
+		}
+	}
+	void program34()
+	{
+		//		for(int i=1;i<=100;i++)
+		//		{
+		//			if(i%2!=0)
+		//			{
+		//				System.out.println(i);
+		//			}
+		//		}
+		for(int i=1;i<=100;i=i+2)
+		{
+			System.out.println(i);
+		}
+	}
+	void program35()
+	{
+		//		int sum=0;
+		//		for(int i=1;i<=10;i++)
+		//		{
+		//			if(i%2==0)
+		//			{
+		//				sum=sum+i;
+		//
+		//			}
+		//			//System.out.println(sum);
+		//		}
+		//		System.out.println(sum);
+		int i=1;
+		int sum=0;
+		while(i<=10)
+		{
+			if(i%2==0)
+			{
+				sum=sum+i;
+			}
+			i++;
+		}
+		System.out.println(sum);
+
+	}
+	void program36()
+	{
+		int sum=0;
+		for(int i=1;i<=100;i++)
+		{
+			if(i%2!=0)
+			{
+				sum=sum+i;
+			}
+		}
+		System.out.println(sum);
+	}
+	void program37()
+	{
+		/*
+		  n=123
+		 1.. i=123 -> i>123 ==>T
+		   count=1
+		   123/10=>remove last digit=>12
+		 2...i=12-->T
+		 count=2
+		 12/10->1
+		 3..
+		 1
+		 */
+		System.out.println("Enter Number:");
+		int n=sc.nextInt();//123 =>3  
+
+		int count=0;
+		for(int i=n;i>0;i=i/10)
+		{
+			count++;
+		}
+		if(n==0)
+		{
+			count=1;
+		}
+		System.out.println("Count of numbers is:"+count);
+	}
+	void program38()
+	{
+		/*
+		 n=123
+		1.. i=123==>T
+		    i%10=123%10=>3
+		    sum=0+3=>3
+		    i/10=>123=>12
+		2...i=12==>T
+		     i%10=12%10=>2
+		     sum=3+2=5
+		     i/10=>1
+		3...i=1==>T
+		    i%10=1%10=1
+		    sum=5+1=>6
+
+		 */
+		System.out.println("Enter Number: ");
+		int n=sc.nextInt();
+		int sum=0;
+		for(int i=n;i>0;i=i/10)
+		{
+			sum=sum+(i%10);
+		}
+		System.out.println("Sum of digit is:"+sum);
+	}
+	void program39()
+	{
+		System.out.println("Enter Number: ");
+		int n=sc.nextInt();
+		int count=0;
+		for(int i=1;i<=n;i++)
+		{
+			if(n%i==0)
+			{
+				count++;
+			}
+		}
+		if(count==2)
+		{
+			System.out.println("Prime");
+		}
+		else
+		{
+			System.out.println("Not prime");
+		}
+	}
+	void program40()
+	{
+		for(int n=1;n<=100;n++)
+		{
+			int count=0;
+			for(int i=1;i<=n;i++)
+			{
+				if(n%i==0)
+				{
+					count++;
+				}
+			}
+			if(count==2)
+			{
+				System.out.println(n+" ");
+			}
+		}
+	}
+	void program41()
+	{
+		int sum=0;
+		for(int n=1;n<=5;n++)
+		{
+			int count=0;
+			for(int i=1;i<=n;i++)
+			{
+				if(n%i==0)
+				{
+					count++;
+				}
+			}
+			if(count==2)
+			{
+				sum=sum+n;
+			}
+		}
+		System.out.println(" sum is: "+sum);
+
+	}
+	void program47()
+	{
+
+		//		for(char ch='a';ch<='z';ch++)
+		//		{
+		//			System.out.println(ch+" ");
+		//		}
+		for(int i=97;i<=122;i++)
+		{
+			System.out.println((char)i+" ");
+		}
+	}
+	void program48()
+	{
+		for(char ch='A';ch<='Z';ch++)
+		{
+			System.out.println(ch+" ");
+		}
+	}
+	void program49()
+	{
+		for(int i=1;i<=20;i++)
+		{
+			if(i%2==0)
+			{
+				System.out.println(i);
+			}
+		}
+	}
+
+	void program50()
+	{
+		for(char ch='A';ch<='Z';ch++)
+		{
+			System.out.print(ch+" ");
+		}
+		System.out.println();
+		for(char ch='a';ch<='z';ch++)
+		{
+			System.out.print(ch+" ");
+		}
+	}
+	void program51()
+	{
+		for(int i=10;i>=1;i--)
+		{
+			if(i%2==0)
+			{
+				System.out.println(i);
+			}
+		}
+	}
+	void program52()
+	{
+		for(int i=1;i<=20;i++)
+		{
+			if(i%2==0 && i%3==0)
+			{
+				System.out.println(i);
+			}
+		}
+	}
+	void program59()
+	{
+		for(char ch='a';ch<='z';ch++)
+		{
+			if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+			{
+				System.out.println(ch+" ");
+			}
+		}
+	}
+	void program60()
+	{
+		for(char ch='A';ch<='Z';ch++)
+		{
+			System.out.print(ch+" ");
+			System.out.println((char)(ch+32)+" ");
+		}
+	}
+	void program61()
+	{
+		System.out.println("Enter Number: ");
+		int n=sc.nextInt();
+		int i=0;
+		for(i=2;i<=n;i++)
+		{
+			if(n%i==0) {
+				break;
+			}
+		}
+		if(n==i)
+		{
+			System.out.println("prime");
+		}
+		else
+		{
+			System.out.println("not");
+		}
+	}
+	void program62()
+	{
+		System.out.println("Enter Number: ");
+		int n=sc.nextInt();
+		check(n,2);
+
+	}
+	void check(int n,int i)
+	{
+		if(n<=1)
+		{
+			System.out.println("Not prime");
+			return;
+		}
+		if(i==n)
+		{
+			System.out.println("Prime number");
+			return;
+		}
+		if (n % i == 0) {
+			System.out.println("Not Prime Number");
+			return;
+		}
+
+		// Recursive call
+		check(n, i + 1);
+	}
+	//Program to find even numbers in an array
+	void program63()
+	{
+		/*
+		 i = 0
+        arr[0] = 1
+         1 % 2 = 1 → NOT EVEN ❌
+		 */
+		//		int arr[]= {1,2,3,4,5};
+		//		int sum=0;
+		//		System.out.println("Even numbers:");
+		//		for(int i=0;i<arr.length;i++)
+		//		{
+		//			if(arr[i]%2==0)
+		//			{
+		//				sum=sum+arr[i];//2+4=
+		//			}
+		//		}
+		//		System.out.println("sum:"+sum);
+		//
+		//		System.out.println("Odd Numbers:");
+		//		for(int i=0;i<arr.length;i++)
+		//		{
+		//			if(arr[i]%2!=0)
+		//			{
+		//				System.out.println(arr[i]);
+		//			}
+		//		}
+		//	int arr[]= {1,2,3,4,5};
+		//		for(int i=0;i<arr.length;i++)
+		//		{
+		//			if(arr[i]%2==0)
+		//			{
+		//				System.out.println(" even numbers:"+arr[i]+"  ");
+		//			}
+		//			else
+		//			{
+		//				System.out.println("Odd numbers: "+arr[i]);
+		//			}
+		//		}
+		//==============sumof even and odd-============
+		int arr[]= {1,2,3,4,5};
+		int evensum=0;
+		int oddsum=0;
+		for(int i=0;i<arr.length;i++)
+		{
+			if(arr[i]%2==0)
+			{
+				evensum=evensum+arr[i];
+			}
+			else
+			{
+				oddsum=oddsum+arr[i];
+			}
+		}
+		System.out.println("Sum of even :"+evensum);
+		System.out.println("Sum of odd :"+oddsum);
+
+	}
+	void program64()
+	{
+		//Reverse string ==>java o/p avaj and java coder==>o/p redoc avaj
+		System.out.println("Enter String: ");
+		String str=sc.nextLine();
+		String rev="";
+		for(int i=str.length()-1;i>=0;i--)
+		{
+			rev=rev+str.charAt(i);
+		}
+	}
+	void program65()
+	{
+		System.out.println("Enter Number: ");
+		int n=sc.nextInt();
+		int rev=0;
+		while(n!=0)
+		{
+			int rem=n%10;
+			rev=rev*10+rem;
+			n=n/10;
+		}
+		System.out.println("Revserse number:"+rev);
+	}
+	void program66()
+	{
+		//Given number is armstrong or not
+		System.out.println("Enter Number: ");
+		int n=sc.nextInt();
+		int temp=n;
+		int sum=0;
+		while(n>0)
+		{
+			int rem=n%10;
+			sum=sum+(rem*rem*rem);
+			n=n/10;
+		}
+		if(sum==temp)
+		{
+			System.out.println("Armstrong");
+		}
+		else
+		{
+			System.out.println("Not");
+		}
+	}
+	void program67()
+	{
+		//find armstrong numbers 1 to N
+		System.out.println("Enter Number: ");
+		int n=sc.nextInt();
+		for(int i=1;i<=n;i++)
+		{
+			int temp=i;
+			int sum=0;
+			while(temp>0)
+			{
+				int rem=temp%10;
+				sum=sum+(rem*rem*rem);
+				temp=temp/10;
+			}
+			if(sum==i)
+			{
+				System.out.println(i);
+			}
+		}
+	}
+	void program68()
+	{
+		//Fibonacci series
+		System.out.println("Enter Numbers: ");
+		int n=sc.nextInt();
+		int a=0,b=1;
+		for(int i=1;i<=n;i++)
+		{
+			System.out.println(a);
+			int c=a+b;
+			a=b;
+			b=c;		
+		}
+	}
+	void program69()
+	{
+		//Find largest element in an array
+		int arr[]= {10,20,30,40,35};
+		int max=arr[0];
+		for(int i=1;i<arr.length;i++)
+		{
+			if(arr[i]>max)
+			{
+				max=arr[i];
+			}
+		}
+		System.out.println("Max element is:"+max);
+	}
+	void program70() {
+		//Find smallest element in an array
+		int arr[]= {1,2,3,4,5};
+		int min=arr[0];
+		for(int i=1;i<arr.length;i++)
+		{
+			if(arr[i]<min)
+			{
+				min=arr[i];
+			}
+		}
+		System.out.println("Min:"+min);
+	}
+	void program71()
+	{
+		//Second largest Number
+		//		int arr[]= {10,20,30,40,50};
+		//		int first=arr[0];
+		//		int second=arr[0];
+		//		for(int i=0;i<arr.length;i++)
+		//		{
+		//			if(arr[i]>first)
+		//			{
+		//				second=first;
+		//				first=arr[i];
+		//			}
+		//		}
+		//		System.out.println("Second largest:"+second);
+		int arr[]= {10,20,30,40};
+		int first=arr[0];
+		int second=arr[0];
+		for(int i=1;i<arr.length;i++)
+		{
+			if(arr[i]>first)
+			{
+				first=arr[i];
+			}
+		}
+		for(int i=0;i<arr.length;i++)
+		{
+			if(arr[i]>second && arr[i]!=first)
+			{
+				second=arr[i];
+			}
+		}
+		System.out.println(second);
+	}
+	void program72()
+	{
+		//program to check given number is palindrome or not
+		System.out.println("Enter Number: ");
+		int n=sc.nextInt();
+		int temp=n;
+		int rev=0;
+		while(temp>0)
+		{
+			int rem=temp%10;
+			rev=rev*10+rem;
+			temp=temp/10;
+
+		}
+		if(rev==n)
+		{
+			System.out.println("Palindrome");
+		}
+		else
+		{
+			System.out.println("Not");
+		}
+	}
+	void program73()
+	{
+		System.out.println("Enter Number: ");
+		int n=sc.nextInt();
+		int square=n*n;
+		int sum=0;
+		while(square>0)
+		{
+			int rem=square%10;
+			sum=sum+rem;
+			square=square/10;
+		}
+		if(sum==n)
+		{
+			System.out.println("neon");
+		}
+		else
+		{
+			System.out.println("Not");
+		}
+	}
+	void program74()
+	{
+		//program to check string is palindrome or not
+		System.out.println("Enter String: ");
+		String str=sc.nextLine();
+		String rev="";
+		for(int i=str.length()-1;i>=0;i--)
+		{
+			rev=rev+str.charAt(i);
+		}
+		if(str.equals(rev))
+		{
+			System.out.println("Palindrome");
+		}
+		else
+		{
+			System.out.println("Not");
+		}
+	}
+	void program75()
+	{
+		//write a program to count vowels and consonant in string
+		System.out.println("Enter String: ");
+		String str=sc.nextLine();
+		int vowels=0;
+		int consonant=0;
+		str=str.toLowerCase();
+
+		for(int i=0;i<str.length();i++)
+		{
+			char ch=str.charAt(i);
+			if(ch>='a'&&ch<='z')
+			{
+				if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+				{
+					vowels++;
+				}
+				else
+				{
+					consonant++;
+				}
+			}
+
+		}
+		System.out.println("Vowels is:"+vowels);
+		System.out.println("Consonant is: "+consonant);
+	}
+	void program76()
+	{
+		//write a program to remove all spaces in that string
+		//input==>java coder
+		//output==>javacoder
+		System.out.println("Enter String: ");
+		String str=sc.nextLine();
+		//		String result="";
+		//		for(int i=0;i<str.length();i++)
+		//		{
+		//			char ch=str.charAt(i);
+		//			if(ch!=' ')
+		//			{
+		//				result=result+ch;
+		//			}
+		//		}
+		//		System.out.println(result);
+		StringBuilder result = new StringBuilder();
+
+		for(int i = 0; i < str.length(); i++) {
+			char ch = str.charAt(i);
+			if(ch != ' ') {
+				result.append(ch);
+			}
+		}
+
+		System.out.println(result);
+	}
+	void program77()
+	{
+		//Write a program to reverse an array
+		//Input: [1, 2, 3, 4]
+		//Output: [4, 3, 2, 1]
+		//Reverse an array without using another array
+		int arr[]= {1,2,3,4};
+		int start=0;
+		int end=arr.length-1;
+		while(start<end)
+		{
+			int temp=arr[start];
+			arr[start]=arr[end];
+			arr[end]=temp;
+			start++;
+			end--;
+		}
+		//		for(int i=0;i<arr.length;i++)
+		//		{
+		//			System.out.println(arr[i]+" ");
+		//		}
+		for(int num:arr)
+		{
+			System.out.print(num+" ");
+		}
+	}
+	void program78()
+	{
+		//Find duplicate characters in a string
+		//Input:  programming  
+		//Output: r, g, m
+		System.out.println("Enter String: ");
+		String str=sc.nextLine();
+		char arr[]=str.toCharArray();
+		for(int i=0;i<arr.length;i++)
+		{
+			int count=1;
+			if(arr[i]=='0')
+			{
+				continue;
+			}
+			for(int j=i+1;j<arr.length;j++)
+			{
+				if(arr[i]==arr[j])
+				{
+					count++;
+					arr[j]='0';
+				}
+			}
+			if(count>1)
+			{
+				System.out.println(arr[i]);
+			}
+		}
+	}
+	void program79()
+	{
+		String str1="listen";
+		String str2="slient";
+		char arr1[]=str1.toLowerCase().toCharArray();
+		char arr2[]=str2.toLowerCase().toCharArray();
+		Arrays.sort(arr1);
+		Arrays.sort(arr2);
+		if(Arrays.equals(arr1, arr2))
+		{
+			System.out.println("Anagram");
+		}
+		else
+		{
+			System.out.println("Not");
+		}
+
+	}
+	void program80()
+	{
+		//Find duplicate elements in an array
+		//Input:  [1, 2, 3, 2, 4, 5, 1]
+		//Output: 1, 2
+		//		int arr[]= {1,2,3,2,4,5,3,1,3};
+		//		for(int i=0;i<arr.length;i++)
+		//		{
+		//			for(int j=i+1;j<arr.length;j++)
+		//			{
+		//				if(arr[i]==arr[j])
+		//				{
+		//					System.out.println(arr[i]);
+		//					break;
+		//				}
+		//			}
+		//		}
+		int arr[]= {1,2,3,4,3,5,3};
+		for(int i=0;i<arr.length;i++)
+		{
+			boolean ispresent=false;
+			for(int k=0;k<i;k++)
+			{
+				if(arr[i]==arr[k])
+				{
+					ispresent=true;
+					break;
+				}
+			}
+			if(ispresent)
+			{
+				continue;
+			}
+			for(int j=i+1;j<arr.length;j++)
+			{
+				if(arr[i]==arr[j])
+				{
+					System.out.println(arr[i]);
+					break;
+				}
+			}
+		}
+//		int arr[] = {1, 2, 3, 2, 4, 1, 5};
+//
+//		for (int i = 0; i < arr.length; i++) {
+//		    int count = 0;
+//		    boolean alreadyPrinted = false;
+//
+//		    for (int j = 0; j < i; j++) {
+//		        if (arr[j] == arr[i]) {
+//		            alreadyPrinted = true;
+//		            break;
+//		        }
+//		    }
+//
+//		    if (!alreadyPrinted) {
+//		        for (int k = i + 1; k < arr.length; k++) {
+//		            if (arr[k] == arr[i]) {
+//		                count++;
+//		            }
+//		        }
+//		        if (count > 0) {
+//		            System.out.println("Duplicate: " + arr[i]);
+//		        }
+//		    }
+	//	}
+	}
+	//====================================================================
+	//======================String Questions==============================
+	//====================================================================
+	void string1()
+	{
+		System.out.println("Enter String:");
+		String str=sc.nextLine();
+		String rev="";
+		for(int i=str.length()-1;i>=0;i--)
+		{
+			rev=rev+str.charAt(i);
+		}
+		System.out.println(rev);
+	}
+	void string2()
+	{
+		System.out.println("Enter String:");
+		String str=sc.nextLine();
+		String rev="";
+		for(int i=str.length()-1;i>=0;i--)
+		{
+			rev=rev+str.charAt(i);
+		}
+		if(str.equals(rev))
+		{
+			System.out.println("Palindrone");
+		}
+		else
+		{
+			System.out.println("Not");
+		}
+	}
+	void string3()
+	{
+		System.out.println("Enter String:");
+		String str=sc.nextLine();
+		int v=0;
+		int c=0;
+		str=str.toLowerCase();
+		for(int i=0;i<str.length();i++)
+		{
+			char ch=str.charAt(i);
+			if(ch>='a'&&ch<='z')
+			{
+				if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+				{
+					v++;
+				}
+				else
+				{
+					c++;
+				}
+			}
+		}
+		System.out.println("Vowels:"+v);
+		System.out.println("Consonant:"+c);
+	}
+	void string4()
+	{
+		System.out.println("Enter String:");
+		String str=sc.nextLine();
+		String result="";
+		for(int i=0;i<str.length();i++)
+		{
+			char ch=str.charAt(i);
+			if(ch!=' ')
+			{
+				result=result+str.charAt(i);
+			}
+		}
+		System.out.println(result);
+	}
+	void string5()
+	{
+		System.out.println("Enter String: ");
+		String str=sc.nextLine();
+		for (int i = 0; i < str.length(); i++) {
+			boolean alreadyPrinted = false;
+
+			for (int j = 0; j < i; j++) {
+				if (str.charAt(j) == str.charAt(i)) {
+					alreadyPrinted = true;
+					break;
+				}
+			}
+
+			if (!alreadyPrinted) {
+				for (int k = i + 1; k < str.length(); k++) {
+					if (str.charAt(k) == str.charAt(i)) {
+						System.out.println("Duplicate: " + str.charAt(i));
+						break;
+					}
+				}
+			}
+		}
+//		System.out.println("Enter String:");
+//		String str = sc.nextLine();
+//
+//		for (int i = 0; i < str.length(); i++) {
+//		    int count = 0;
+//		    boolean alreadyPrinted = false;
+//
+//		    for (int j = 0; j < i; j++) {
+//		        if (str.charAt(j) == str.charAt(i)) {
+//		            alreadyPrinted = true;
+//		            break;
+//		        }
+//		    }
+//
+//		    if (!alreadyPrinted) {
+//		        for (int k = i + 1; k < str.length(); k++) {
+//		            if (str.charAt(k) == str.charAt(i)) {
+//		                count++;
+//		            }
+//		        }
+//
+//		        if (count > 0) {
+//		            System.out.println("Duplicate: " + str.charAt(i));
+//		        }
+//		    }
+//		}
+	}
+	void string6()
+	{
+		/*Upper to lower without inbuilt method
+		str = "HELLO"
+		Output = "hello"
+		 */
+		System.out.println("Enter String:");
+		String str=sc.nextLine();
+		String result="";
+		for(int i=0;i<str.length();i++)
+		{
+			char ch=str.charAt(i);
+			if(ch>='A'&&ch<='Z')
+			{
+				result=result+(char)(ch+32);
+			}
+			else
+			{
+				result=result+ch;
+			}
+		}
+		System.out.println(result);	
+	}
+	void string7()
+	{
+		/*Check two strings equal without equals()
+		 str1 = "hello" and str2 = "hello"
+          Output = Equal 
+		 */
+		System.out.println("Enter String1:");
+		String str1=sc.nextLine();
+		System.out.println("Enter String2:");
+		String str2=sc.nextLine();
+		if (str1.length() != str2.length()) {
+			System.out.println("Not Equal");
+			return;
+		}
+
+		for (int i = 0; i < str1.length(); i++) {
+			if (str1.charAt(i) != str2.charAt(i)) {
+				System.out.println("Not Equal");
+				return;
+			}
+		}
+		System.out.println("Equal");
+	}
+	void string8()
+	{
+		/*
+		 count number of words in a string
+		 str = "hello world how are you"
+         Word count = 5
+		 */
+		System.out.println("Enter String:");
+		String str=sc.nextLine();
+		str = str.trim();
+		int count = 0;
+
+		for (int i = 0; i < str.length(); i++) {
+			if (str.charAt(i) == ' ' && str.charAt(i + 1) != ' ') {
+				count++;
+			}
+		}
+
+		count = count + 1;
+		System.out.println("Word count: " + count);
+	}
+	void string9()
+	{
+		/*
+		 write program to check string is anagram or not
+		 str1 = "listen" and str2 = "silent"
+		 listen → l, i, s, t, e, n
+         silent → s, i, l, e, n, t
+         Same characters, same count — just different order = Anagram
+		 */
+		System.out.println("Enter String1:");
+		String str1=sc.nextLine();
+		System.out.println("Enter String2:");
+		String str2=sc.nextLine();
+		if (str1.length() != str2.length()) {
+			System.out.println("Not Anagram");
+			return;
+		}
+
+		char[] arr1 = str1.toCharArray();
+		char[] arr2 = str2.toCharArray();
+
+		Arrays.sort(arr1);
+		Arrays.sort(arr2);
+
+		if (Arrays.equals(arr1, arr2)) {
+			System.out.println("Anagram");
+		} else {
+			System.out.println("Not Anagram");
+		}
+	}
+	void string10()
+	{
+		//Remove duplicate characters
+		//input->hello ,Output->helo
+		System.out.println("Enter String:");
+		String str=sc.nextLine();
+		String result = "";
+
+		for (int i = 0; i < str.length(); i++) {
+			boolean found = false;
+
+			for (int j = 0; j < result.length(); j++) {
+				if (str.charAt(i) == result.charAt(j)) {
+					found = true;
+					break;
+				}
+			}
+
+			if (!found) {
+				result = result + str.charAt(i);
+			}
+		}
+
+		System.out.println(result);
+	}
+	public static void main(String[] args) {
+		BasicProgram b=new BasicProgram();
+		//b.program1();
+		//b.program2();
+		//b.multiplication();
+		//b.program4();
+		//b.program5();
+		//b.program6();
+		//b.program7();
+		//b.program8();
+		//b.program9();
+		//b.program10();
+		//b.program21();
+		//b.program22();
+		//b.program23();
+		//b.program24();
+		//b.program26();
+		//b.program27();
+		//b.program31();
+		//b.program32();
+		//b.program33();
+		//b.program34();
+		//b.program35();
+		//b.program36();
+		//b.program37();
+		//b.program38();
+		//b.program39();
+		//b.program40();
+		//b.program41();
+		//b.program47();
+		//b.program48();
+		//b.program49();
+		//b.program50();
+		//b.program51();
+		//b.program52();
+		//b.program59();
+		//b.program60();
+		//b.program61();
+		//b.program62();
+		//b.program63();
+		//b.program64();
+		//b.program65();
+		//b.program66();
+		//b.program67();
+		//b.program68();
+		//b.program69();
+		//b.program70();
+		//b.program71();
+		//b.program72();
+		//b.program73();
+		//b.program74();
+		//b.program75();
+		//b.program76();
+		//b.program77();
+		//b.program80();
+		//b.string1();
+		//b.string2();
+		//b.string3();
+		//b.string4();
+		//b.string5();
+		//b.string6();
+		//b.string7();
+		b.string10();
+
+
+
+
+	}
+}
